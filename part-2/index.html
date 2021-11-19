@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="tailwind.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <!-- Responsive Header -->
+    <header class="flex items-center justify-between flex-wrap bg-gray-800 py-4 w-full">
+      <div class="flex-shrink-0 ml-6">
+        <a href="#">
+          <i class="fas fa-drafting-compass fa-2x text-yellow-500"></i>
+          <span class="ml-1 text-3xl text-blue-200 font-semibold">WebCraft</span>
+        </a>
+      </div>
+  
+      <button id="nav-toggle" class="md:hidden p-2 mr-4 ml-6 my-2 border rounded border-gray-600 text-blue-200 hover:border-blue-200">
+        <i class="fas fa-bars fa-2x"></i>
+      </button>
+  
+      <div class="pl-6 w-full md:w-auto hidden md:block" id="nav-content">
+        <ul class="md:flex">
+          <li class="mr-6 p-1 md:border-b-2 border-yellow-500">
+            <a class="text-blue-200 cursor-default" href="#">Home</a>
+          </li>
+          <li class="mr-6 p-1">
+            <a class="text-white hover:text-blue-300" href="#">Services</a>
+          </li>
+          <li class="mr-6 p-1">
+            <a class="text-white hover:text-blue-300" href="#">Projects</a>
+          </li>
+          <li class="mr-6 p-1">
+            <a class="text-white hover:text-blue-300" href="#">Team</a>
+          </li>
+          <li class="mr-6 p-1">
+            <a class="text-white hover:text-blue-300" href="#">About</a>
+          </li>
+          <li class="mr-6 p-1">
+            <a class="text-white hover:text-blue-300" href="#">Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Vue Component -->
+    <div id="app">
+      <recipe-card
+        imgurl="https://source.unsplash.com/x00CzBt4Dfk/1600x900"
+        imgalt="Pizza Margherita image"
+        titleurl="#"
+        title="Pizza Margherita"
+        description="Invented in Naples in honor of the first queen of Italy, the Margherita pizza is the triumph of Italian cuisine in the world."
+        time="1h 15m"
+        servings="4 Servings"
+        level="Easy"
+      >
+      </recipe-card>
+    </div>
+
+    <!-- Alert Components -->
+    <div class="alert alert-info m-6 w-1/3">
+      <div class="alert-title alert-info-title">Info</div>
+      <div class="alert-content alert-info-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
+    <div class="alert alert-warning m-6 w-1/3">
+      <div class="alert-title alert-warning-title">Warning</div>
+      <div class="alert-content alert-warning-content">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+    </div>
+
+    <!-- Dark Mode Example -->
+    <div id="switch" class="dark m-6 w-1/3">
+      <div class="p-2 bg-white dark:bg-gray-800">
+        <h1 class="text-gray-900 dark:text-white">Dark mode in action! Click me to toggle between light and dark modes...</h1>
+        <p class="text-gray-600 dark:text-gray-300">
+          Lorem ipsum...
+        </p>
+      </div>
+    </div>
+
+    <!-- Custom Utilities Example -->
+    <p class="m-6">Testing custom <span class="underline text-decoration-wavy text-decoration-blue">text decoration</span> utilities.</p>
+
+  <script>
+    // Vue Recipe Card component
+    const app = Vue.createApp({})
+
+    app.component('recipe-card', {
+      props: ['imgurl', 'imgalt', 'titleurl', 'title', 'description', 'time', 'servings', 'level'],
+      template: `
+        <div class="m-5 shadow-md w-80 rounded overflow-hidden">
+          <img :src="imgurl" :alt="imgalt">
+          <div class="p-2">
+            <div class="font-bold text-lg text-gray-700 leading-snug">
+              <a :href="titleurl" class="hover:underline">{{ title }}</a>
+            </div>
+            <p class="text-xs leading-tight tracking-wide my-2">{{ description }}</p>
+            <div class="flex pt-2 border-t border-gray-300 text-sm text-gray-700 divide-x-2">
+              <div class="flex-1 text-center">
+                <i class="far fa-clock"></i>
+                <p>{{ time }}</p>
+              </div>
+              <div class="flex-1 text-center">
+                <i class="fas fa-utensils"></i>
+                <p>{{ servings }}</p>
+              </div>
+              <div class="flex-1 text-center">
+                <i class="fas fa-signal"></i>
+                <p>{{ level }}</p>
+              </div>
+            </div>
+          </div>
+        </div>`
+    })
+
+    app.mount('#app')
+
+    // Toggle the links menu in the header
+    document.getElementById('nav-toggle').onclick = function(){
+      document.getElementById("nav-content").classList.toggle("hidden");
+    }
+
+    // Toggle the modes
+    document.getElementById('switch').onclick = function(){
+      this.classList.toggle("dark");
+    }
+  </script>
+  </body>
+</html>
