@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="tailwind.css">
+    <style>
+      .box {
+        color: white;
+        background-color: green;
+        min-height: 150px;
+        padding-top: 10%;
+        padding-left: 15%;
+        font-size: 1.5rem;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mx-auto p-8 w-full lg:w-1/2">
+
+      <h1 class="text-3xl font-bold">Grid Layout Examples</h1>
+    
+      <h2 class="my-6 text-2xl underline underline-offset-2">Example #1</h2>
+    
+      <div class="grid grid-cols-3 grid-rows-2 gap-x-4 gap-y-2">
+        <div class="box row-span-2 col-span-2">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+      </div>
+
+      <h2 class="my-6 text-2xl underline underline-offset-2">Example #2</h2>
+    
+      <div class="grid grid-cols-2 grid-rows-4 gap-x-4 gap-y-2">
+        <div class="box row-span-4">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+      </div>
+
+      <h2 class="my-6 text-2xl underline underline-offset-2">Example #3</h2>
+
+      <div class="grid grid-cols-4 grid-rows-2 gap-x-2 gap-y-4">
+        <div class="box col-span-2">1</div>
+        <div class="box col-span-2">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+
+      <h2 class="my-6 text-2xl underline underline-offset-2">Example #4</h2>
+
+      <div class="grid grid-cols-3 grid-rows-4 gap-x-4 gap-y-2">
+        <div class="box row-span-2">1</div>
+        <div class="box row-span-4">2</div>
+        <div class="box row-span-2">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+      </div>
+      
+      <hr class="my-6">
+      
+      <div class="grid grid-cols-3 grid-rows-4 gap-x-4 gap-y-2">
+        <div class="box row-span-2">1</div>
+        <div class="box row-start-3">2</div>
+        <div class="box row-start-4">3</div>
+        <div class="box row-span-4">4</div>
+        <div class="box row-span-2">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+      </div>
+
+      <h2 class="my-6 text-2xl underline underline-offset-2">Example #5</h2>
+
+      <div class="grid grid-cols-3 grid-rows-3 gap-2">
+        <div class="box col-start-1 col-end-3">1</div>
+        <div class="box row-start-2 row-end-4">2</div>
+        <div class="box row-start-2">3</div>
+        <div class="box row-start-1 row-end-3">4</div>
+        <div class="box col-start-2 col-end-4">5</div>
+      </div>
+    
+    </div>
+  </body>
+</html>

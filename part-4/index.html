@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="tailwind.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="flex items-center justify-between flex-wrap font-display bg-neutral-800 py-4 w-full">
+    <div class="flex-shrink-0 ml-6">
+      <a href="#">
+      <i class="fas fa-drafting-compass fa-2x text-primary-500"></i>
+      <span class="ml-1 text-3xl text-secondary-200 font-semibold">WebCraft</span>
+      </a>
+    </div>
+
+    <button id="nav-toggle" class="tablet:hidden p-2 mr-4 ml-6 my-2 border rounded border-neutral-600 text-secondary-200 hover:border-secondary-200">
+      <i class="fas fa-bars fa-2x"></i>
+    </button>
+
+    <div class="pl-6 w-full tablet:w-auto hidden tablet:block" id="nav-content">
+      <ul class="tablet:flex"> 
+        <li class="mr-5.5 p-1 tablet:border-b-2 border-primary-500">
+          <a class="text-secondary-200 cursor-default" href="#">Home</a>
+        </li>
+        <li class="mr-5.5 p-1">
+          <a class="text-white hover:text-secondary-300" href="#">Services</a>
+        </li>
+        <li class="mr-5.5 p-1">
+          <a class="text-white hover:text-secondary-300" href="#">Projects</a>
+        </li>
+        <li class="mr-5.5 p-1">
+          <a class="text-white hover:text-secondary-300" href="#">Team</a>
+        </li>
+        <li class="mr-5.5 p-1">
+          <a class="text-white hover:text-secondary-300" href="#">About</a>
+        </li>
+        <li class="mr-5.5 p-1">
+          <a class="text-white hover:text-secondary-300" href="#">Contacts</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <h1>Main Heading Is Here</h1>
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis urna vitae sapien volutpat commodo nec in nulla. Cras consectetur lorem pharetra turpis iaculis, vel finibus ante facilisis. Morbi auctor, elit sit amet congue sollicitudin, mi mi aliquam neque, ac condimentum purus leo nec felis. Pellentesque bibendum vel massa vel sodales. Nam semper dolor ac pharetra ultrices. Etiam lectus purus, congue rutrum mi a, gravida finibus ipsum. Donec at auctor orci. Praesent sagittis augue in eleifend volutpat. Integer blandit consequat fermentum.</p>
+
+  <h2>Second Heading Is Here</h2>
+
+  <p>Donec tempor odio sed sem porttitor, ac sodales dolor ultrices. Phasellus nec enim et nibh vestibulum placerat. Nam sed lobortis tortor. Etiam at ipsum risus. Vestibulum erat elit, iaculis a pulvinar at, interdum nec mi. Aenean in consectetur ipsum, vitae rhoncus arcu. Vestibulum quis sapien nibh. Curabitur feugiat vestibulum lorem, vitae volutpat lectus porttitor tincidunt. Praesent diam sem, ultrices quis nibh luctus, pharetra tristique elit. Donec mattis velit eget nulla hendrerit dictum. Maecenas dictum orci at sagittis interdum. Etiam posuere, eros nec suscipit convallis, mi est tempor purus, congue ultrices ipsum massa nec lectus. Fusce id odio vel diam tristique iaculis. Cras dapibus facilisis suscipit. Donec rutrum molestie nibh, in tempus augue venenatis sed. Pellentesque eget mauris in magna ornare pharetra.</p>
+
+  <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam non urna in mi dictum tempor. Quisque leo odio, pretium ut egestas eu, pulvinar eget lacus. Nulla quis orci ac dui hendrerit mattis quis a ex. Phasellus facilisis rutrum ante a auctor. Morbi non gravida risus. Integer convallis leo odio, nec pulvinar magna condimentum eleifend. Cras at massa a libero mattis vestibulum eget ac purus. Pellentesque at libero eget sem sollicitudin interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam nulla sapien, venenatis nec elit accumsan, laoreet mattis ligula. Sed faucibus vitae ex sed ultricies. Nulla odio nisi, pretium eget lacus nec, dapibus luctus nunc. Vestibulum consequat est at risus faucibus consequat. Curabitur iaculis lorem eget rutrum fermentum. Ut pulvinar condimentum dignissim.</p>
+
+  <script>
+    document.getElementById('nav-toggle').onclick = function(){
+      document.getElementById("nav-content").classList.toggle("hidden");
+    }
+  </script>
+</body>
+</html>

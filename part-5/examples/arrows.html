@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Arrows Example</title>
+  <link href="../tailwind.css" rel="stylesheet">
+</head>
+<body class="prose p-6">
+  <h2>Tree-View Dynamic List with CSS Arrows:</h2>
+  <ul>
+    <li><span class="toggle cursor-pointer after:arrow after:arrow-right">JavaScript</span>
+      <ul class="section hidden">
+        <li>Node</li>
+        <li>React</li>
+        <li><span class="toggle cursor-pointer after:arrow after:arrow-right">Vue</span>
+          <ul class="section hidden">
+            <li>Nuxt</li>
+            <li>Vuetify</li>
+            <li><span class="toggle cursor-pointer after:arrow after:arrow-right">Quasar</span>
+              <ul class="section hidden">
+                <li>Components</li>
+                <li>Composables</li>
+                <li>Directives</li>
+              </ul>
+            </li>
+          </ul>
+        </li>  
+      </ul>
+    </li>
+  </ul>
+  
+  <script>
+    let toggles = document.getElementsByClassName("toggle")
+    let sections = document.getElementsByClassName("section")
+    
+    for (let i = 0; i < toggles.length; i++) {
+      toggles[i].addEventListener("click", function() {
+        let section = sections[i]
+        section.classList.contains('hidden') ? section.classList.remove('hidden') : section.classList.add('hidden')
+        this.classList.toggle("after:arrow-down")
+      })
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "tailwind-part-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i styles.css -o tailwind.css",
+    "dev:watch": "npx tailwindcss -i styles.css -o tailwind.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.0.23"
+  }
+}
